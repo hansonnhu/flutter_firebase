@@ -11,3 +11,5 @@ DO IT FIRST
 7. Choose the project you just created.
 8. select the platform. (like android or iOS...)
 9. finish.
+
+by youtube link https://www.youtube.com/watch?v=A3M0N_B-CR0

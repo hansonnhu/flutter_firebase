@@ -2,8 +2,10 @@ import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_firebase/api/firebase_api.dart';
 import 'package:flutter_firebase/firebase_options.dart';
-
+import 'package:flutter_firebase/pages/notification_page.dart';
 import 'pages/home_page.dart';
+
+final navigatorKey = GlobalKey<NavigatorState>();
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
   await Firebase.initializeApp(options: DefaultFirebaseOptions.currentPlatform);
@@ -19,6 +21,10 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       home: HomePage(),
+      navigatorKey: navigatorKey,
+      routes:{
+        '/notification_screen':(context) => const NotificationPage(),
+      }
     );
   }
 }
